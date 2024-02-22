@@ -1,0 +1,26 @@
+<section class="mt-24 py-10 px-4">
+
+    <a href="/home">&larr; Back</a>
+    <div class="admin-title">
+      <h2>Add Match Results</h2>
+    </div>
+    
+    <form action="/home/add-result" method="POST">
+
+      <label for="title"><b>Home Team</b></label>
+      <input type="text" placeholder="Home team" name="hometeam">
+    
+      <label for="title"><b>Home Team Score</b></label>
+      <input type="text" placeholder="Home team" name="hometeamscore">
+
+      <label for="title"><b>Away Team</b></label>
+      <input type="text" placeholder="Away team" name="awayteam">
+    
+      <label for="title"><b>Away Team Score</b></label>
+      <input type="text" placeholder="Away team" name="awayteamscore">
+
+      <button type="submit" value="Add" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    
+    </form>
+
+</section>

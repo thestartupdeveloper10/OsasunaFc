@@ -1,0 +1,35 @@
+<section class="mt-24 py-10 px-4">
+
+    <a href="/home">&larr; Back</a>
+    <div class="admin-title">
+      <h2>Update Player Stats</h2>
+    </div>
+    
+    <form action="/home/edit-stat/<%= stats._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    
+      <label for="title"><b>Enter name</b></label>
+      <input type="text" placeholder="Name" name="playername" value="<%= stats.Name %>">
+    
+      <label for="title"><b>Enter Position</b></label>
+      <input type="text" placeholder="Position" name="position" value="<%= stats.Position %>">
+
+      <label for="title"><b>Enter appearances</b></label>
+      <input type="text" placeholder="Appearances" name="appearance" value="<%= stats.Appearance %>">
+
+      <label for="title"><b>Enter Jersey Number</b></label>
+      <input type="text" placeholder="Jersey" name="jersey" value="<%= stats.Jersey %>">
+
+      <label for="title"><b>Enter Goals</b></label>
+      <input type="text" placeholder="Goals" name="goals" value="<%= stats.Goals %>">
+
+      <label for="title"><b>Enter Assists</b></label>
+      <input type="text" placeholder="Assists" name="assist" value="<%= stats.Assist %>">
+
+      <label for="title"><b>Upload Image:</b></label>
+      <input type="file" id="avatar" name="image"/>
+
+      <button type="submit" value="Add" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    
+    </form>
+
+</section>

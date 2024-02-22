@@ -1,0 +1,61 @@
+<section class="mt-20 bg-[#07004D]">
+    <h1 class="px-4 pt-5">Next Matches</h1>
+    <div class="flex flex-col px-4 py-5 bg-[#07004D]">
+        <div class="bg-sky-600 pt-5 rounded-md md:flex md:flex-row gap-8 items-center justify-center flex-col">
+            <% games.forEach(game => { %>
+                <div class="bg-blue-500 mb-5 rounded-md py-6 px-3">
+                    <div class="match-text flex flex-col justify-center items-center">
+                        <h1 class="uppercase text-[24px] font-bold">Matches</h1>
+                        <h2 class="text-[12px] "><%= game.Matchtype %></h2>
+                        <h2 class="uppercase text-[12px] font-bold">Match day</h2>
+                        <span class="text-[12px] block"><%= game.Matchdate %></span>
+                        <span class="text-[12px] block"><%= game.Matchtime %></span>
+                        <span class="text-[12px] block"><%= game.Matchvenue %></span>
+                    </div>
+                    <div class="overal flex items-center justify-center">
+                        <% if (game.Hometeam === 'Osasuna') { %>
+                            <div class="left flex justify-center items-center flex-col w-full">
+                                <img src="../img/Osasuna.png" alt="" class="max-w-[58px] max-h-[58px]">
+                                <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Hometeam %></h1>
+                            </div>
+                        <% } else { %>
+                            <div class="left flex justify-center items-center flex-col w-full">
+                                <img src="../img/default-logo.png" alt="" class="max-w-[58px] max-h-[58px]">
+                                <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Hometeam %></h1>
+                            </div>
+                        <% } %>
+                        <div class="middle flex items-center justify-center w-full font-extrabold">
+                            VS
+                        </div>
+                        <% if (game.Awayteam === 'Osasuna') { %>
+                            <div class="right flex justify-center items-center flex-col w-full">
+                                <img src="../img/Osasuna.png" alt="" class="max-w-[58px] max-h-[58px]">
+                                <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Awayteam %></h1>
+                            </div>
+                        <% } else { %>
+                            <div class="right flex justify-center items-center flex-col w-full">
+                                <img src="../img/default-logo.png" alt="" class="max-w-[58px] max-h-[58px]">
+                                <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Awayteam %></h1>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>            
+        </div>
+    </div>
+    <h1 class="px-4 pt-5">Results</h1>
+   <div class="px-4 py-5 w-full flex justify-center items-center">
+        <div class="">
+            <% results.forEach(result=> { %>
+                <div class="overal flex items-center justify-center  px-6 md:py-5">
+                  <div class="left"><h1 class="uppercase text-[16px] font-bold py-4 px-2 w-[100px]"><%= result.Hometeam %></h1></div>
+              <div class="middle flex justify-center items-center  w-full gap-1 md:ml-24  md:mr-24">
+                  <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.HometeamScore %></div>
+                  <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.AwayteamScore %></div>
+              </div>
+              <div class="right  w-full"><h1 class="uppercase text-[16px] font-bold py-4 px-2"><%= result.Awayteam %></h1></div>
+              </div>
+               <% }) %>
+        </div>
+   </div>
+</section>

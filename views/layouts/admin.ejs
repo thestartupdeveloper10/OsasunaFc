@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/extra_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script type="text/javascript" defer src="/js/script.js"></script>
+</head>
+<body>
+          
+            <div class="container mx-auto max-w-[1350px] px-4">
+                <main class="main">
+                    <%- include('../partials/admin_header.ejs')  %>
+                    <%- body %>
+                    </main>
+                    <%- include('../partials/footer.ejs')  %>
+            </div>
+           
+ 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Date picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
+<!-- Initialize Swiper -->
+<script src="../js/swiper.js"></script>
+<script src="../js/loader.js"></script>
+</body>
+</html>

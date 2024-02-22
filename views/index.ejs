@@ -1,0 +1,354 @@
+<section class="hero mt-[90px] relative">
+ <!-- Swiper -->
+ <div class="swiper mySwiper" id="swiper-1">
+    <div class="swiper-wrapper">
+     <% homeDetails.forEach(detail => { %>
+      <div class="swiper-slide relative ">
+        <div class="absolute  bottom-0 top-[60%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+        <img src="/img/home_images/<%= detail.image %>" alt="<%= detail.title %> Image">
+      <div class="information absolute bottom-12 md:bottom-28 left-8 md:left-16 flex  justify-between items-center w-[1200px]">
+       <div class=" flex flex-col justify-start items-start"> <h1 class=""><%= detail.title %></h1>
+        <p class="text-start w-[200px] md:w-[1000px]"><%= detail.brief %></p>
+      </div>
+      <a href="/book">
+        <button type="button" class="text-white bg-[#2D82B7] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</button>
+      </a>
+      </div>
+    </div>
+     <% }) %>
+    </div>
+    <div class="swiper-custom-nav hidden md:flex">
+      <svg width="44" height="44" viewBox="0 0 64 64" id="nav-left" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M32 2.79753e-06C14.3269 4.34256e-06 -4.34256e-06 14.3269 -2.79753e-06 32C-1.2525e-06 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 1.2525e-06 32 2.79753e-06ZM28.9334 24.3999C28.6667 24.1333 28.4 23.9999 28 23.9999C27.6 23.9999 27.3334 24.1333 27.0667 24.3999L20.4 31.0666L20.4 31.0667C20.2 31.2667 20.075 31.5041 20.025 31.751C19.9417 32.1624 20.0666 32.6 20.4 32.9333L27.0667 39.6C27.6 40.1333 28.4 40.1333 28.9333 39.6C29.4667 39.0667 29.4667 38.2667 28.9333 37.7333L24.5334 33.3334L42.7222 33.3334C43.4889 33.3334 44 32.8 44 32C44 31.2 43.4889 30.6667 42.7222 30.6667L24.5333 30.6667L28.9334 26.2666C29.4667 25.7333 29.4667 24.9333 28.9334 24.3999Z" fill="white"/>
+      </svg>
+
+      <svg width="44" height="44" viewBox="0 0 64 64" id="nav-right" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64ZM35.0666 39.6001C35.3333 39.8667 35.6 40.0001 36 40.0001C36.4 40.0001 36.6666 39.8667 36.9333 39.6001L43.6 32.9334L43.6 32.9333C43.8 32.7333 43.925 32.4959 43.975 32.249C44.0583 31.8376 43.9334 31.4 43.6 31.0667L36.9333 24.4C36.4 23.8667 35.6 23.8667 35.0667 24.4C34.5333 24.9333 34.5333 25.7333 35.0667 26.2667L39.4666 30.6666H21.2778C20.5111 30.6666 20 31.2 20 32C20 32.8 20.5111 33.3333 21.2778 33.3333H39.4667L35.0666 37.7334C34.5333 38.2667 34.5333 39.0667 35.0666 39.6001Z" fill="white"/>
+      </svg>
+  </div>
+    <div class="swiper-pagination"></div>
+  </div>
+ 
+</section>
+
+<section class="matches flex items-center justify-center w-full md:-mt-[50px] relative">
+
+    <div class="overall grid md:grid-cols-2 grid-cols-1 w-[1200px] bg-gradient-to-r from-blue-400 via-violet-600 to-blue-800 md:gap-1 gap-1 rounded-md">
+        <div class="left py-5 border-2 border-spacing-2 md:rounded-md rounded-none border-gray-900">
+            <% games.forEach(game => { %>
+              <div class="match-text flex flex-col justify-center items-center">
+                <h1 class="uppercase text-[24px] font-bold">Matches</h1
+                <h2 class="text-[12px] "><%= game.Matchtype %></h2>
+                <h2 class="uppercase text-[12px] font-bold">Match day</h2>
+                <span class="text-[12px] block"><%= game.Matchdate %></span>
+                <span class="text-[12px] block"><%= game.Matchtime %></span>
+                <span class="text-[12px] block"><%= game.Matchvenue %></span>
+            </div>
+            <div class="overal flex items-center justify-center px-2 md:px-0">
+              <div class="left flex justify-center items-center flex-col w-full">
+                  <% if (game.Hometeam === 'Osasuna') { %>
+                      <img src="../img/Osasuna.png" alt="" class="max-w-[41px] max-h-[43px]">
+                  <% } else { %>
+                      <img src="../img/default-logo.png" alt="" class="max-w-[52px] max-h-[52px]">
+                  <% } %>
+                  <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Hometeam %></h1>
+              </div>
+              <div class="middle flex items-center justify-center w-full font-extrabold">
+                  VS
+              </div>
+              <div class="right flex justify-center items-center flex-col w-full">
+                  <% if (game.Awayteam === 'Osasuna') { %>
+                      <img src="../img/Osasuna.png" alt="" class="max-w-[52px] max-h-[52px]">
+                  <% } else { %>
+                      <img src="../img/default-logo.png" alt="" class="max-w-[52px] max-h-[52px]">
+                  <% } %>
+                  <h1 class="uppercase text-[16px] font-bold py-4"><%= game.Awayteam %></h1>
+              </div>
+          </div>          
+            <% }) %>
+        </div>
+        <div class="right py-5">
+            <div class="match-text flex flex-col justify-center items-center">
+                <h1 class="uppercase text-[24px] font-bold mb-3">Results</h1
+            </div>
+
+            <div class="overal flex justify-center items-center">
+              <div>
+                <% results.forEach(result=> { %>
+                  <div class="overal flex items-center justify-center  px-6">
+                    <div class="left"><h1 class="uppercase text-[16px] font-bold py-4 px-2 w-[100px]"><%= result.Hometeam %></h1></div>
+                <div class="middle flex justify-center items-center  w-full gap-1">
+                    <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.HometeamScore %></div>
+                    <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.AwayteamScore %></div>
+                </div>
+                <div class="right  w-full"><h1 class="uppercase text-[16px] font-bold py-4 px-2"><%= result.Awayteam %></h1></div>
+                </div>
+                 <% }) %>
+
+                 <% if (nextPage !== null) { %>
+                  <a href="/?page=<%= nextPage %>" class="text-[18px] pt-5 hover:text-blue-400">&lt; Previous Results</a>
+                <% } %>
+               </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<h1 class="text-center font-extrabold md:py-5 py-2">News</h1>
+<section class="bg-gradient-to-tr from-zinc-300 via-gray-300 to-sky-300 dark:bg-gray-900 rounded-md md:rounded-none">
+  <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+       <% Blogs.forEach(blog => { %>
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"><%= blog.title %></h2>
+        <p class="mb-4"><%= blog.body %></p>
+       
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+          <img class="w-full rounded-lg" src="/img/blog_images/<%= blog.images[0] %>" alt="<%= blog.title %> Image 1">
+          <img class="mt-4 w-full lg:mt-10 rounded-lg"  src="/img/blog_images/<%= blog.images[1] %>" alt="<%= blog.title %> Image 2">
+        <% }) %>
+        </div>
+  </div>
+</section>
+
+<section class="players flex items-center flex-col justify-center ">
+  <h1 class="text-center font-extrabold md:mb-8">Players</h1>
+  <p class="block py-4 md:hidden text-right"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" style="fill: rgb(205, 219, 240);transform: ;msFilter:;"><path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path><path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path></svg></p>
+      <!-- Swiper -->
+  <div class="swiper mySwiper2 " id="swiper-2">
+    <div class="swiper-wrapper h-[300px]">
+
+
+
+      <% player_stats.forEach(player => { %>
+        <div class="swiper-slide relative cursor-pointer">
+          <a href="/<%= player.Name %>">
+            <figure>
+              <img src="../img/player_images/<%= player.image %>" alt="<%= player.Name %>" />
+              <figcaption>
+                  <h1><%= player.Name %></h1>
+                  <p><%= player.Jersey %></p>
+              </figcaption>
+          </figure>
+          </a>
+        </div>
+      <% }) %>
+
+
+
+
+      <!-- <div class="swiper-slide relative cursor-pointer">
+        <a href="/Agai">
+          <figure>
+            <img src="../img/agai_.jpg" alt="mike" />
+            <figcaption>
+                <h1>Agai</h1>
+                <p>Goalkeeper</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+   
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Henry">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Henry</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Felix">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Felix</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Tony">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Tony</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Chris">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Chris</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Faby">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Fabby</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Yobra">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Yobra</h1>
+                <p>Defender</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Ivan">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Ivan</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Dele">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Delo</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Solo">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Solo</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Moha">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Moha</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Aringo">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Aringo</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Adrian">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Adrian</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Kirwa">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Kirwa</h1>
+                <p>Midfilder</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Cliffe">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Cliffe</h1>
+                <p>Striker</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Ibra">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Ibra</h1>
+                <p>Striker</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Calvins">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Calvins</h1>
+                <p>Striker</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Augo">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Augo</h1>
+                <p>Striker</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="swiper-slide cursor-pointer">
+        <a href="/Otii">
+          <figure>
+            <img src="../img/mike2.jpg" alt="mike" />
+            <figcaption>
+                <h1>Otii</h1>
+                <p>Striker</p>
+            </figcaption>
+        </figure>
+        </a>
+      </div> -->
+    </div>
+    <div class="swiper-pagination hidden md:block"></div>
+  </div>
+</section>

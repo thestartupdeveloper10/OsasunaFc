@@ -1,0 +1,224 @@
+<section class="mt-28">
+<div class="matches py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+
+  <h1 class="underline">Home Details</h1>
+  <div>
+    <ul class="admin-posts">
+    
+      <% homeDetails.forEach((detail,index) => { %>
+       
+        <li class="bg-blue-700 my-3 ">
+          <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
+            <a href="/home-details/<%= detail._id %>" class="px-3 text-white font-normal">
+              <div class="justify-start gap-4 items-start inline-flex flex-col">
+                <p><span class="font-bold pr-2">Title:</span><%= detail.title %></p>
+                <p><span class="font-bold pr-2">Brief:</span><%= detail.brief %></p>
+              </div>
+            </a>
+        </span>
+          
+          <div class="admin-post-controls px-3">
+            <a href="/home/edit-home-details/<%= detail._id %>" class="btn">Edit</a>
+    
+            <form action="/home/delete-home-details/<%= detail._id %>?_method=DELETE" method="POST">
+              <input type="submit" value="Delete" class="btn-delete btn">
+            </form>
+    
+          </div>
+    
+        </li>
+    
+      <% }) %>
+    </ul>
+  </div>
+  </div>
+
+  <div class="matches py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+
+    <h1 class="underline">Contact Information</h1>
+    <div>
+      <ul class="admin-posts">
+      
+        <% contact_info.forEach((contact,index) => { %>
+         
+          <li class="bg-blue-700 my-3 ">
+            <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
+              <a href="/home-details/<%= contact._id %>" class="px-3 text-white font-normal">
+                <div class="justify-start gap-4 items-start inline-flex flex-col">
+                  <p><span class="font-bold pr-2">Full Name:</span><%= contact.Fullname%></p>
+                  <p><span class="font-bold pr-2">Email:</span><%= contact.Email %></p>
+                  <p><span class="font-bold pr-2">Enquiery:</span><%= contact.Enquire %></p>
+                </div>
+              </a>
+          </span>
+            
+      
+          </li>
+      
+        <% }) %>
+      </ul>
+    </div>
+    </div>
+
+<div class="matches py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+  <h1 class="underline">All Available Matches</h1>
+  <ul class="admin-posts">
+  
+    <% games.forEach((game,index) => { %>
+     
+      <li class="bg-blue-700 my-3 ">
+        <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
+          <a href="/match/<%= game._id %>" class="px-3 text-white font-normal">
+            <div class="inline-flex justify-between gap-4 items-center">
+              <p><%= game.Hometeam %></p>
+              <p>vs</p>
+              <p><%= game.Awayteam %></p>
+            </div>
+          </a>
+      </span>
+        
+        <div class="admin-post-controls px-3">
+          <a href="/home/edit-match/<%= game._id %>" class="btn">Edit</a>
+  
+          <form action="/home/delete-match/<%= game._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="btn-delete btn">
+          </form>
+  
+        </div>
+  
+      </li>
+  
+    <% }) %>
+  </ul>
+</div>
+</div>
+
+<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+    <h1 class="underline">All Available Results</h1>
+    <div>
+      
+      <ul class="admin-posts">
+  
+        <% results.forEach((result,index) => { %>
+         
+          <li class="bg-blue-700 my-3 ">
+            <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
+              <a href="/result/<%= result._id %>" class="px-3 text-white font-normal">
+                <div class=" justify-center gap-4 items-center inline-flex">
+                  <p><%= result.Hometeam %></p>
+                  <p><%= result.HometeamScore %></p>
+                  <p class="font-bold">:</p>
+                  <p><%= result.AwayteamScore %></p>
+                  <p><%= result.Awayteam %></p>
+                 
+                </div>
+              </a>
+            </a>
+          </span>
+            <div class="admin-post-controls px-3">
+              <a href="/home/edit-result/<%= result._id %>" class="btn">Edit</a>
+      
+              <form action="/home/delete-result/<%= result._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" class="btn-delete btn">
+              </form>
+      
+            </div>
+      
+          </li>
+      
+        <% }) %>
+      </ul>
+
+    </div>
+</div>
+
+<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+    <h1 class="underline">All Available Blogs</h1>
+    <div>
+      <ul class="admin-posts">
+        <% data.forEach((post, index) => { %>
+          <li class="bg-blue-700 my-3 ">
+            <span class="px-3 text-black font-extrabold"><%= index + 1 %>.<a href="/post/<%= post._id %>" class="px-3 text-white font-normal">
+              <%= post.title %>
+            </a>
+          </span>
+                <div class="admin-post-controls px-3">
+                  <a href="/home/edit-blog/<%= post._id %>" class="btn">Edit</a>
+          
+                  <form action="/home/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="btn-delete btn">
+                  </form>
+          
+                </div>
+          
+              </li>
+          
+            <% }) %>
+          </ul>
+    </div>
+</div>
+
+
+<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+  <h1 class="underline">Bookings</h1>
+  <div>
+    
+    <ul class="admin-posts">
+
+      <% bookings.forEach((book,index) => { %>
+       
+        <li class="bg-blue-700 my-3 ">
+          <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
+            <a href="/book/<%= book._id %>" class="px-3 text-white font-normal">
+              <div class=" justify-start gap-4 items-start inline-flex flex-col">
+                <p><span class="font-bold pr-2">Club:</span><%= book.FootballClub %></p>
+                <p><span class="font-bold pr-2">Name:</span><%= book.FirstName %></p>
+                <p><span class="font-bold pr-2">Phone:</span><%= book.PhoneNumber %></p>
+                <p><span class="font-bold pr-2">Date:</span><%= book.Date %></p>
+                <p><span class="font-bold pr-2">Time:</span><%= book.Time %></p>
+               
+              </div>
+            </a>
+          </a>
+        </span>
+          <div class="admin-post-controls px-3">
+    
+            <form action="/home/delete-book/<%= book._id %>?_method=DELETE" method="POST">
+              <input type="submit" value="Delete" class="btn-delete btn">
+            </form>
+    
+          </div>
+    
+        </li>
+    
+      <% }) %>
+    </ul>
+
+  </div>
+</div>
+
+
+<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+  <h1 class="underline">All Players</h1>
+  <div>
+    <ul class="admin-posts">
+      <% stats.forEach((stat, index) => { %>
+        <li class="bg-blue-700 my-3 ">
+          <span class="px-3 text-black font-extrabold"><%= index + 1 %>.<a href="/stat/<%= stat._id %>" class="px-3 text-white font-normal">
+            <%= stat.Name %>
+          </a>
+        </span> <!-- Displaying the index -->
+          
+          <div class="admin-post-controls px-3">
+            <a href="/home/edit-stat/<%= stat._id %>" class="btn">Edit</a>
+            <form action="/home/delete-stat/<%= stat._id %>?_method=DELETE" method="POST">
+              <input type="submit" value="Delete" class="btn-delete btn">
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  
+</div>
+</section>
