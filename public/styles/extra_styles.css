@@ -158,11 +158,9 @@ textarea {
 
 .swiper {
   width: 100%;
-  height: 100%;
 }
 .swiper-wrapper{
   width: 100%;
-  height: 550px;
 }
 .swiper-slide {
   color: white;
@@ -190,25 +188,22 @@ textarea {
 
 
 #swiper-1 .swiper-pagination {
-  bottom: 80px;
+  bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
-  /* .swiper-slide img {
-      height: 50%;
+  .swiper-slide img {
+      height: 100%;
   }
-  .hero{
-    height: 100%;
-  } */
+  #swiper-1 .swiper-pagination {
+    bottom: 50px;
+  }
   .swiper-slide figcaption {
       left: 0;
       transform: none;
       width: 100%;
       border-radius: 0;
       background-color: #3D518C;
-  }
-  #swiper-1 .swiper-pagination {
-    bottom: 20px;
   }
   #swiper-2 .swiper-pagination {
     bottom: 0px;
@@ -219,13 +214,13 @@ textarea {
 #swiper-1 .swiper-pagination-bullet {
   margin: 0 .5rem;
   opacity: 1;
-  background-color: rosybrown;
+  background-color: rgb(206, 199, 199);
   width: .75rem;
   height: .75rem;
 }
 
 #swiper-1 .swiper-pagination-bullet-active {
-  background-color: #091540;
+  background-color: #ffffff;
 }
 
 .swiper-custom-nav {
@@ -248,10 +243,7 @@ textarea {
 .swiper-custom-nav svg:hover {
   opacity: 1;
 }
-.matches{
-  /* transform: translateY(-50px); */
-  z-index: 2;
-}
+
 .hero{
   z-index: 1;
   height: 500px;
@@ -296,7 +288,7 @@ textarea {
 #swiper-2 .swiper-pagination-bullet {
   margin: 0 .5rem;
   opacity: 1;
-  background-color: rosybrown;
+  background-color: white;
   width: .75rem;
   height: .75rem;
 }
@@ -431,14 +423,17 @@ textarea {
 main-loader{
   height: 100vh;
   background-color: rgba(4, 57, 82, 0.75);
+  z-index: 999;
 }
 
 .main-fader{
+  z-index: 999;
   width:100%;
   height: 100vh;
   position: absolute;
   background-color: rgba(4, 57, 82, 0.75);
   .loader {
+    z-index: 999;
     position: fixed;
     top: 50%;
     left: 50%;

@@ -1,14 +1,14 @@
-<section class="hero mt-[90px] relative">
+<section class="hero mt-[98px] relative">
  <!-- Swiper -->
- <div class="swiper mySwiper" id="swiper-1">
-    <div class="swiper-wrapper">
+ <div class="swiper mySwiper h-[450px] md:h-[600px]" id="swiper-1">
+    <div class="swiper-wrapper ">
      <% homeDetails.forEach(detail => { %>
       <div class="swiper-slide relative ">
-        <div class="absolute  bottom-0 top-[60%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+        <div class="absolute  bottom-0 top-0 rounded-t-md left-0 right-0 bg-black opacity-[0.3]"></div>
         <img src="/img/home_images/<%= detail.image %>" alt="<%= detail.title %> Image">
-      <div class="information absolute bottom-12 md:bottom-28 left-8 md:left-16 flex  justify-between items-center w-[1200px]">
-       <div class=" flex flex-col justify-start items-start"> <h1 class=""><%= detail.title %></h1>
-        <p class="text-start w-[200px] md:w-[1000px]"><%= detail.brief %></p>
+      <div class="information absolute bottom-[70px] md:bottom-[150px] left-8 md:left-16 flex  justify-between items-center w-[1200px]">
+       <div class=" flex flex-col justify-start items-start"> <h1 class="md:text-[32px] text-[22px]"><%= detail.title %></h1>
+        <p class="text-start w-[250px] md:w-[1000px] mt-2 md:mt-4"><%= detail.brief %></p>
       </div>
       <a href="/book">
         <button type="button" class="text-white bg-[#2D82B7] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-4 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</button>
@@ -31,12 +31,12 @@
  
 </section>
 
-<section class="matches flex items-center justify-center w-full md:-mt-[50px] relative">
+<section class="matches flex items-center justify-center md:mx-0 mx-4 md:w-full -mt-[80px] md:mt-[50px] relative z-20 ">
 
-    <div class="overall grid md:grid-cols-2 grid-cols-1 w-[1200px] bg-gradient-to-r from-blue-400 via-violet-600 to-blue-800 md:gap-1 gap-1 rounded-md">
-        <div class="left py-5 border-2 border-spacing-2 md:rounded-md rounded-none border-gray-900">
+    <div class="overall grid md:grid-cols-2 grid-cols-1 w-[1200px] bg-gradient-to-r from-blue-400 via-violet-600 to-blue-800 md:gap-1 gap-1">
+        <div class="left py-5 rounded-none border-gray-400 md:border-r-2 border-b-2 md:border-b-0">
             <% games.forEach(game => { %>
-              <div class="match-text flex flex-col justify-center items-center">
+              <div class="match-text flex flex-col justify-center items-center ">
                 <h1 class="uppercase text-[24px] font-bold">Matches</h1
                 <h2 class="text-[12px] "><%= game.Matchtype %></h2>
                 <h2 class="uppercase text-[12px] font-bold">Match day</h2>
@@ -95,7 +95,7 @@
     </div>
 
 </section>
-<h1 class="text-center font-extrabold md:py-5 py-2">News</h1>
+<h1 class="text-center font-extrabold md:py-5 py-4">News</h1>
 <section class="bg-gradient-to-tr from-zinc-300 via-gray-300 to-sky-300 dark:bg-gray-900 rounded-md md:rounded-none">
   <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">

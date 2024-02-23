@@ -51,11 +51,16 @@
                 </div>
               </a>
           </span>
-            
+         <div class="admin-post-controls px-3">
+          <form action="/home/delete-contact-details/<%= contact._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="btn-delete btn mx-3">
+          </form>
+         </div>
       
           </li>
       
         <% }) %>
+        
       </ul>
     </div>
     </div>

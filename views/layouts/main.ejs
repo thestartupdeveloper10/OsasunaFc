@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- loader -->
-    <div class="main-fader loader-wrapper" responsive-height-comments>
+    <div class="main-fader loader-wrapper z-50" responsive-height-comments>
         <div class="loader">
       <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.83 151.5">
@@ -36,10 +36,11 @@
               </svg>
         </div>
       </div>  
-          
+      <%- include('../partials/header.ejs')  %>
             <div class="container mx-auto max-w-[1350px] px-4 page-content">
+               
                 <main class="main">
-                    <%- include('../partials/header.ejs')  %>
+                    
                     <%- body %>
                     </main>
                     <%- include('../partials/footer.ejs',{GoalKeeper})  %>

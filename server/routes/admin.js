@@ -281,6 +281,17 @@ router.post('/home/home-details',upload.single('image'),authMiddleware,async (re
    }
 
 })
+// delete contact
+router.delete('/home/delete-contact-details/:id',authMiddleware, async (req, res) => {
+
+  try {
+    await Contact.findByIdAndDelete( { _id: req.params.id } );
+    res.redirect('/home');
+  } catch (error) {
+    console.log(error);
+  }
+
+});
 
 // delete delete home details
 
