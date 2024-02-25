@@ -37,11 +37,11 @@
 
     <h1 class="underline">Contact Information</h1>
     <div>
-      <ul class="admin-posts">
+      <ul class="admin-posts ">
       
         <% contact_info.forEach((contact,index) => { %>
          
-          <li class="bg-blue-700 my-3 ">
+          <li class="bg-blue-700 my-3 flex flex-col md:block">
             <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
               <a href="/home-details/<%= contact._id %>" class="px-3 text-white font-normal">
                 <div class="justify-start gap-4 items-start inline-flex flex-col">
@@ -106,7 +106,7 @@
   
         <% results.forEach((result,index) => { %>
          
-          <li class="bg-blue-700 my-3 ">
+          <li class="bg-blue-700 my-3 flex flex-col md:block">
             <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
               <a href="/result/<%= result._id %>" class="px-3 text-white font-normal">
                 <div class=" justify-center gap-4 items-center inline-flex">
@@ -120,7 +120,7 @@
               </a>
             </a>
           </span>
-            <div class="admin-post-controls px-3">
+            <div class="admin-post-controls px-3 flex md:table justify-start items-center">
               <a href="/home/edit-result/<%= result._id %>" class="btn">Edit</a>
       
               <form action="/home/delete-result/<%= result._id %>?_method=DELETE" method="POST">
