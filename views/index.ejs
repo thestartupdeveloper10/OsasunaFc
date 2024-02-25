@@ -40,7 +40,7 @@
                 <h1 class="uppercase text-[24px] font-bold">Matches</h1
                 <h2 class="text-[12px] "><%= game.Matchtype %></h2>
                 <h2 class="uppercase text-[12px] font-bold">Match day</h2>
-                <span class="text-[12px] block"><%= game.Matchdate %></span>
+                <span class="text-[12px] block text-center"><%= game.Matchdate %></span>
                 <span class="text-[12px] block"><%= game.Matchtime %></span>
                 <span class="text-[12px] block"><%= game.Matchvenue %></span>
             </div>
@@ -78,8 +78,8 @@
                   <div class="overal flex items-center justify-center  px-6">
                     <div class="left"><h1 class="uppercase text-[16px] font-bold py-4 px-2 w-[100px]"><%= result.Hometeam %></h1></div>
                 <div class="middle flex justify-center items-center  w-full gap-1">
-                    <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.HometeamScore %></div>
-                    <div class="scores px-6 py-3 bg-blue-200 text-[#07004D]"><%= result.AwayteamScore %></div>
+                    <div class="scores md:px-6 md:py-3 py-2 px-1 bg-blue-200 text-[#07004D]"><%= result.HometeamScore %></div>
+                    <div class="scores md:px-6 md:py-3 py-2 px-1  bg-blue-200 text-[#07004D]"><%= result.AwayteamScore %></div>
                 </div>
                 <div class="right  w-full"><h1 class="uppercase text-[16px] font-bold py-4 px-2"><%= result.Awayteam %></h1></div>
                 </div>
