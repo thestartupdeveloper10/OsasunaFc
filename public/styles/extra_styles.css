@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 
 :root {
   --black: #1c1c1c;
@@ -13,11 +15,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: var(--gray-light);
   font-size: var(--font-size-base);
-  background-color: #3D518C;
+  background-color: #f6f6f6;
   margin: 0;
+  padding: 0;
 
 }
 
@@ -31,6 +34,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"],
+input[type="date"],
 select,
 textarea {
   font-family: 'Poppins', sans-serif;
@@ -152,9 +156,9 @@ textarea {
 
 
 /* swiper */
-.players{
-  height: 600px;
-}
+/* .players{
+  height: 800px;
+} */
 
 .swiper {
   width: 100%;
@@ -267,7 +271,7 @@ textarea {
   color: #fff;
   font-size: 17px;
   line-height: 29px;
-  background-color: #1B2CC1;
+  background-color: #06557c;
   display: flex;
   flex-direction: column;
   justify-content: center;

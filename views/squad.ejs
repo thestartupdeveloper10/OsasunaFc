@@ -2,9 +2,9 @@
   <% GoalKeeper.forEach(goalie => { %>
     <a href="/<%= goalie.Name %>">
       <div class="keeper">
-        <h1 class="text-center py-6">Goalkeepers</h1>
+        <h1 class="text-center py-6 text-[#043464]">Goalkeepers</h1>
         <div class="cursor-pointer h-[400px] relative text-white">
-          <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+          <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-[#3D518C]"></div>
          
             <figure>
               <img src="../img/player_images/<%= goalie.image %>" class="h-[400px] w-[400px] object-cover" alt="mike" />
@@ -20,12 +20,12 @@
     <% }) %>
 
     <div class="defenders">
-        <h1 class="text-center py-6">Defenders</h1>
+        <h1 class="text-center py-6 text-[#043464]">Defenders</h1>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
       <% Defenders.forEach(defender => { %>
         <a href="/<%= defender.Name %>">
           <div class="cursor-pointer md:h-[400px] h-[200px] relative text-white">
-            <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+            <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-[#3D518C]"></div>
               <figure>
                 <img src="../img/player_images/<%= defender.image %>" class="md:h-[400px] md:w-[400px] h-[200px] w-[200px] object-cover" alt="<%= defender.Name %>" />
                 <figcaption class="absolute bottom-1 md:bottom-4 left-[40%]">
@@ -42,12 +42,12 @@
     </div>
    
     <div class="midfilders">
-      <h1 class="text-center py-6">Midfilders</h1>
+      <h1 class="text-center py-6 text-[#043464]">Midfilders</h1>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
    <% Midfilders.forEach(midfilder => { %>
     <a href="/<%= midfilder.Name %>">
       <div class="cursor-pointer md:h-[400px] h-[200px] relative text-white">
-        <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+        <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-[#3D518C]"></div>
           <figure>
             <img src="../img/player_images/<%= midfilder.image %>" class="md:h-[400px] md:w-[400px] h-[200px] w-[200px] object-cover" alt="<%= midfilder.Name %>" />
             <figcaption class="absolute bottom-1 md:bottom-4 left-[40%]">
@@ -65,12 +65,12 @@
 
 
   <div class="strikers">
-    <h1 class="text-center py-6">Strikers</h1>
+    <h1 class="text-center py-6 text-[#043464]">Strikers</h1>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
   <% Strikers.forEach(striker => { %>
     <a href="/<%= striker.Name %>">
       <div class="cursor-pointer md:h-[400px] h-[200px] relative text-white">
-        <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+        <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-[#3D518C]"></div>
           <figure>
             <img src="../img/player_images/<%= striker.image %>" class="md:h-[400px] md:w-[400px] h-[200px] w-[200px] object-cover" alt="<%= striker.Name %>" />
             <figcaption class="absolute bottom-1 md:bottom-4 left-[40%]">
@@ -86,9 +86,9 @@
 </div>
 
 <div class="coach">
-  <h1 class="text-center py-6">Coach</h1>
+  <h1 class="text-center py-6 text-[#043464]">Coach</h1>
   <div class="cursor-pointer h-[400px] relative text-white">
-    <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-black opacity-50"></div>
+    <div class="absolute  bottom-0 top-[75%] rounded-t-md left-0 right-0 bg-[#3D518C]"></div>
       <figure>
         <img src="../img/Gibu.jpg" class="h-[400px] w-[400px] object-cover" alt="mike" />
         <figcaption class="absolute bottom-4 left-[40%]">

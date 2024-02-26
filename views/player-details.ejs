@@ -1,32 +1,32 @@
-<section class="mt-20 bg-[#07004D]">
+<section class="mt-20">
     <div class="overal-container grid grid-cols-1 md:grid-cols-5 py-10 pl-5 md:gap-0 gap-5">
         <div class="player-img col-span-2">
             <figure class="flex flex-col justify-center items-center gap-2">
                 <img src="../img/player_images/<%= info.image %>" class="h-[400px] w-[400px] object-cover rounded-md" />
-                <figcaption class="px-5 py-2 bg-slate-500 flex flex-col items-center justify-center">
-                    <h1><%= info.Name %></h1>
-                    <p><%= info.Position %></p>
+                <figcaption class="px-5 py-2  flex flex-col items-center justify-center shadow-lg rounded-sm text-white">
+                    <h1 class="text-[#043464]"><%= info.Name %></h1>
+                    <p class="text-[#4b6a8a]"><%= info.Position %></p>
                 </figcaption>
             </figure>
         </div>
      <div class="col-span-3 flex flex-col gap-5">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-2 px-3">
-            <div class="apperance bg-gradient-to-tl from-sky-600 via-violet-600 to-indigo-800 px-2 rounded-md flex flex-col items-center justify-center">
-                <h1 class="text-[20px]">Osasuna apperances</h1>
-                <p class="text-center font-extrabold md:text-[80px]"><%= info.Appearance %></p>
+            <div class="apperance shadow-lg rounded-sm text-white px-2  flex flex-col items-center justify-center">
+                <h1 class="text-[20px] text-[#043464]">Osasuna apperances</h1>
+                <p class="text-center font-extrabold md:text-[80px] text-[#043464]"><%= info.Appearance %></p>
             </div>
-            <div class="goals flex flex-col items-center justify-center">
-                <h1 class="text-[20px]">Osasuna goals</h1>
-                <p class="text-center font-extrabold md:text-[80px]"><%= info.Goals %></p>
+            <div class="goals flex flex-col items-center justify-center shadow-lg rounded-sm text-white">
+                <h1 class="text-[20px] text-[#043464]">Osasuna goals</h1>
+                <p class="text-center font-extrabold md:text-[80px] text-[#043464]"><%= info.Goals %></p>
             </div>
-            <div class="assist flex flex-col items-center justify-center">
-                <h1 class="text-[20px]">Osasuna assists</h1>
-                <p class="text-center font-extrabold md:text-[80px]"><%= info.Assist %></p>
+            <div class="assist flex flex-col items-center justify-center shadow-lg rounded-sm text-white">
+                <h1 class="text-[20px] text-[#043464]">Osasuna assists</h1>
+                <p class="text-center font-extrabold md:text-[80px] text-[#043464]"><%= info.Assist %></p>
             </div>
         </div>
         <div class="jersey flex flex-col items-center justify-center ">
-            <h1 class="text-center font-extrabold text-[100px] bg-gradient-to-tl from-sky-600 via-violet-600 to-indigo-800 px-6"><%= info.Jersey %></h1>
-            <p class="text-center font-extrabold text-[30px]">Jersey Number</p>
+            <h1 class="text-center font-extrabold text-[100px] shadow-lg rounded-sm bg-white px-6 text-[#043464]"><%= info.Jersey %></h1>
+            <p class="text-center font-extrabold text-[30px] text-[#043464]">Jersey Number</p>
         </div>
      </div>
  
