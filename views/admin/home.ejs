@@ -7,7 +7,7 @@
     
       <% homeDetails.forEach((detail,index) => { %>
        
-        <li class="bg-blue-700 my-3 ">
+        <li class="bg-blue-500 my-3 ">
           <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
             <a href="/home-details/<%= detail._id %>" class="px-3 text-white font-normal">
               <div class="justify-start gap-4 items-start inline-flex flex-col">
@@ -21,7 +21,7 @@
             <a href="/home/edit-home-details/<%= detail._id %>" class="btn">Edit</a>
     
             <form action="/home/delete-home-details/<%= detail._id %>?_method=DELETE" method="POST">
-              <input type="submit" value="Delete" class="btn-delete btn">
+              <input type="submit" value="Delete" class=" btn-delete btn">
             </form>
     
           </div>
@@ -41,7 +41,7 @@
       
         <% contact_info.forEach((contact,index) => { %>
          
-          <li class="bg-blue-700 my-3 flex flex-col md:block">
+          <li class="bg-blue-500 my-3 flex flex-col md:block">
             <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
               <a href="/home-details/<%= contact._id %>" class="px-3 text-white font-normal">
                 <div class="justify-start gap-4 items-start inline-flex flex-col">
@@ -71,7 +71,7 @@
   
     <% games.forEach((game,index) => { %>
      
-      <li class="bg-blue-700 my-3 ">
+      <li class="bg-blue-500 my-3 ">
         <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
           <a href="/match/<%= game._id %>" class="px-3 text-white font-normal">
             <div class="inline-flex justify-between gap-4 items-center">
@@ -98,7 +98,7 @@
 </div>
 </div>
 
-<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5 mx-4">
     <h1 class="underline">All Available Results</h1>
     <div>
       
@@ -106,7 +106,7 @@
   
         <% results.forEach((result,index) => { %>
          
-          <li class="bg-blue-700 my-3 flex flex-col md:block">
+          <li class="bg-blue-500 my-3 flex flex-col md:block">
             <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
               <a href="/result/<%= result._id %>" class="px-3 text-white font-normal">
                 <div class=" justify-center gap-4 items-center inline-flex">
@@ -137,12 +137,12 @@
     </div>
 </div>
 
-<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5 mx-4">
     <h1 class="underline">All Available Blogs</h1>
     <div>
       <ul class="admin-posts">
         <% data.forEach((post, index) => { %>
-          <li class="bg-blue-700 my-3 ">
+          <li class="bg-blue-500 my-3 ">
             <span class="px-3 text-black font-extrabold"><%= index + 1 %>.<a href="/post/<%= post._id %>" class="px-3 text-white font-normal">
               <%= post.title %>
             </a>
@@ -164,7 +164,7 @@
 </div>
 
 
-<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+<div class="results py-9 bg-[#091540] px-5 md:mt-10 mt-5 mx-4">
   <h1 class="underline">Bookings</h1>
   <div>
     
@@ -172,7 +172,7 @@
 
       <% bookings.forEach((book,index) => { %>
        
-        <li class="bg-blue-700 my-3 ">
+        <li class="bg-blue-500 my-3 ">
           <span class="px-3 text-black font-extrabold"><%= index + 1 %>.
             <a href="/book/<%= book._id %>" class="px-3 text-white font-normal">
               <div class=" justify-start gap-4 items-start inline-flex flex-col">
@@ -203,12 +203,12 @@
 </div>
 
 
-<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5">
+<div class="blogs py-9 bg-[#091540] px-5 md:mt-10 mt-5 mx-4 mb-5">
   <h1 class="underline">All Players</h1>
   <div>
     <ul class="admin-posts">
       <% stats.forEach((stat, index) => { %>
-        <li class="bg-blue-700 my-3 ">
+        <li class="bg-blue-500 my-3 ">
           <span class="px-3 text-black font-extrabold"><%= index + 1 %>.<a href="/stat/<%= stat._id %>" class="px-3 text-white font-normal">
             <%= stat.Name %>
           </a>

@@ -7,7 +7,7 @@
             <h2 class="mb-6 text-sm font-semibold text-white  dark:text-white">Goalkeepers</h2>
             <% GoalKeeper.forEach(goalie => { %>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
+                    <li class="mb-4 underline md:no-underline">
                         <a href="/<%= goalie.Name %>" class=" hover:underline"><%= goalie.Name %></a>
                     </li>
                 </ul>
@@ -17,7 +17,7 @@
             <h2 class="mb-6 text-sm font-semibold text-white  dark:text-white">Defenders</h2>
             <% Defenders.forEach(defender => { %>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
+                    <li class="mb-4 underline md:no-underline">
                         <a href="/<%= defender.Name %>" class=" hover:underline"><%= defender.Name %></a>
                     </li>
                 </ul>
@@ -27,7 +27,7 @@
             <h2 class="mb-6 text-sm font-semibold text-white  dark:text-white">Midfilders</h2>
             <% Midfilders.forEach(midfilder => { %>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
+                    <li class="mb-4 underline md:no-underline">
                         <a href="/<%= midfilder.Name %>" class=" hover:underline"><%= midfilder.Name %></a>
                     </li>
                 </ul>
@@ -37,7 +37,7 @@
             <h2 class="mb-6 text-sm font-semibold text-white  dark:text-white">Forwards</h2>
             <% Strikers.forEach(striker => { %>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
+                    <li class="mb-4 underline md:no-underline">
                         <a href="/<%= striker.Name %>" class=" hover:underline"><%= striker.Name %></a>
                     </li>
                 </ul>
