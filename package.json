@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build:css": "postcss public/styles/tailwind.css -o public/styles/styles.css --watch",
-    "dev": "nodemon app.js"
+    "server": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

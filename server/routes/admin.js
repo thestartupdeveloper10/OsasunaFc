@@ -608,25 +608,29 @@ post.images.forEach(image => {
 
 // add new match
 
-router.post('/home/add-match',authMiddleware, async(req,res) => {
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
+router.post('/home/add-match', authMiddleware, async (req, res) => {
   try {
-   const newMatch = new Matches({
-    Hometeam: req.body.hometeam,
-    Awayteam: req.body.awayteam,
-    Matchtype: req.body.matchtype,
-    Matchdate: req.body.matchdate,
-    Matchtime: req.body.matchtime,
-    Matchvenue: req.body.matchvenue
-   })
-    
-   await Matches.create(newMatch)
-   res.redirect('/home')
+      const newMatch = new Matches({
+          Hometeam: capitalizeFirstLetter(req.body.hometeam),
+          Awayteam: capitalizeFirstLetter(req.body.awayteam),
+          Matchtype: capitalizeFirstLetter(req.body.matchtype),
+          Matchdate: req.body.matchdate,
+          Matchtime: req.body.matchtime,
+          Matchvenue: capitalizeFirstLetter(req.body.matchvenue)
+      });
+
+      await Matches.create(newMatch);
+      res.redirect('/home');
 
   } catch (error) {
-    console.log(error);
+      console.log(error);
   }
-})
+});
+
 
 // * GET /
 // * Admin - Edit Post
@@ -664,25 +668,28 @@ router.get('/home/edit-match/:id', authMiddleware, async (req, res) => {
  * PUT /
  * Admin - Edit match
 */
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 router.put('/home/edit-match/:id', authMiddleware, async (req, res) => {
   try {
+      await Matches.findByIdAndUpdate(req.params.id, {
+          Hometeam: capitalizeFirstLetter(req.body.hometeam),
+          Awayteam: capitalizeFirstLetter(req.body.awayteam),
+          Matchtype: capitalizeFirstLetter(req.body.matchtype),
+          Matchdate: req.body.matchdate,
+          Matchtime: req.body.matchtime,
+          Matchvenue: capitalizeFirstLetter(req.body.matchvenue)
+      });
 
-    await Matches.findByIdAndUpdate(req.params.id, {
-      Hometeam: req.body.hometeam,
-      Awayteam: req.body.awayteam,
-      Matchtype: req.body.matchtype,
-      Matchdate: req.body.matchdate,
-      Matchtime: req.body.matchtime,
-      Matchvenue: req.body.matchvenue
-    });
-
-    res.redirect(`/home/edit-match/${req.params.id}`);
+      res.redirect(`/home/edit-match/${req.params.id}`);
 
   } catch (error) {
-    console.log(error);
+      console.log(error);
   }
-
 });
+
 
 // delete match
 

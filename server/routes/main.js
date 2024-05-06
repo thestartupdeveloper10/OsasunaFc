@@ -1,4 +1,8 @@
 const express = require('express');
+const nodemailer = require('nodemailer')
+const router = express.Router();
+
+// models
 const Player_stats = require('../models/player_stats');
 const Results = require('../models/results');
 const Blog = require('../models/blogs');
@@ -6,8 +10,7 @@ const Matches = require('../models/matches');
 const Bookings = require('../models/book');
 const Contact = require('../models/contact');
 const HomeDetails = require('../models/home-details')
-const nodemailer = require('nodemailer')
-const router = express.Router();
+
 
 
 /**
